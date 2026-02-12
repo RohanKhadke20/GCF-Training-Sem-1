@@ -1,0 +1,316 @@
+/* ===== MODERN UI SYSTEM ===== */
+:root {
+    --primary:linear-gradient(to right, #2f9703,yellow);
+    --primary-dark: #c0c31c;
+    --accent: #2d520b;
+    --dark: #0f172a;
+    --glass: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-white: #f8fafc;
+    --text-muted: #94a3b8;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* ===== NAVIGATION (DESKTOP) ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 1000;
+    transition: var(--transition);
+    color: var(--primary);
+}
+
+.header.sticky {
+    padding: 15px 0;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-cta {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 12px;
+}
+
+/* ===== MOBILE BOTTOM DOCK (THE "HAMBURGER REMOVER") ===== */
+.mobile-dock {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    display: none;
+    /* Hidden on Desktop */
+    justify-content: space-around;
+    padding: 12px 10px;
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dock-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    gap: 4px;
+}
+
+.dock-item i {
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.dock-item:hover i {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero-btns {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.hero-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.s1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary);
+    top: -100px;
+    right: -100px;
+    opacity: 0.3;
+}
+
+.s2 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent);
+    bottom: -50px;
+    left: -50px;
+    opacity: 0.2;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.top-tag {
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #0b9a5c, #c8c503);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.btn-main {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-main:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* ===== CARDS ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 40px;
+    border-radius: 24px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* ===== CONTACT ===== */
+.contact-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border-radius: 30px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.glass-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.glass-form input,
+.glass-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+}
+.footer{
+    text-align: center;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    /* Remove traditional nav */
+    .mobile-dock {
+        display: flex;
+    }
+
+    /* Show Bottom Dock */
+    .hero {
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

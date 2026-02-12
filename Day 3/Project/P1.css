@@ -1,37 +1,43 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color:wheat;
-    color:black;
+
+body {
+    background-color: white;
+    color: black;
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     line-height: 1.5;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
-    margin:0 auto;
-    padding:16px;
+    margin: 0 auto;
+    padding: 16px;
 }
-header{
+
+header {
     background-color: black;
     color: white;
-    padding:18px 0;
+    padding: 18px 0;
 }
-header .contanier{
-    display:flex;
+
+header .contanier {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
 }
-header h1{
+
+header h1 {
     font-size: 1.25rem;
     margin: 0;
 }
-nav{
+
+nav {
     display: flex;
     gap: 12px;
     align-items: center;
@@ -39,7 +45,7 @@ nav{
     justify-content: center;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
     padding: 6px 8px;
@@ -47,66 +53,115 @@ nav a{
     text-align: center;
 }
 
-nav a:hover{
+nav a:hover {
     color: rgb(15, 54, 128);
-    background: rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
 }
-.container2{
-   height:80vh;
-    display:flex;
+
+.container2 {
+    height: 80vh;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background: url(https://th.bing.com/th/id/OIP.LiTHFjaQBFxnrSsu-2M2eAHaE7?w=286&h=191&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3)center/cover;
-    background-size:cover;
+    background-size: cover;
     justify-content: center;
-    gap:12px;
-    color:white;
+    gap: 12px;
+    color: white;
 }
-.order{
+
+.order {
     background-color: aliceblue;
     border-radius: 8px;
-    padding:15px 48px;
+    padding: 15px 48px;
 }
-.sec22{
-    width:50%;
-    background-color:turquoise;
-    padding:12px;
+
+.sec22 {
+    width: 50%;
+    background-color: turquoise;
+    padding: 12px;
 }
-.sec21{
-    height:40vh;
-    background-color:lightcoral;
-    padding:12px;
+
+.sec21 {
+    height: 40vh;
+    background-color: lightcoral;
+    padding: 12px;
 }
-.awc23{
+
+.awc23 {
     margin: 10px;
-    padding:10px;
+    padding: 10px;
 }
-.flex{
-    display:flex;
-    gap:10px;
+
+.flex {
+    display: flex;
+    gap: 10px;
     flex-wrap: wrap;
 }
-.item{
-    flex:1;
+
+.item {
+    flex: 1;
     background-color: orange;
     padding: 20px;
 }
-.grid{
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
-.grid-item{
+
+.grid-item {
     background: lightgreen;
-    height:90px;
-    width:200px
+    height: 90px;
+    width: 200px
 }
-.tab{
+
+.tab {
     display: flex;
-    gap:10px;
+    gap: 10px;
 }
-.tab-item{
-    flex:1;
-    background-color: azure;
+
+.tab-item {
+    flex: 1;
+    background-color: goldenrod;
     padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.gallery-item {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media(max-width:600px){
+    nav{
+display: flex;
+flex-direction: column;
+gap:10px;
+flex-wrap: wrap;
+    }
+    .nav a{
+        padding: 6px 8px;
+        background-color: chartreuse;
+        color: blue;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    .nav a:hover{
+        background-color: bisque;
+    }
 }
