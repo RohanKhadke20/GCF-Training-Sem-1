@@ -1,6 +1,6 @@
 /* ===== MODERN UI SYSTEM ===== */
 :root {
-    --primary:linear-gradient(to right, #2f9703,yellow);
+    --primary: linear-gradient(to right, #2f9703, yellow);
     --primary-dark: #c0c31c;
     --accent: #2d520b;
     --dark: #0f172a;
@@ -143,11 +143,13 @@ body {
     align-items: center;
     position: relative;
 }
+
 .hero-btns {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
+
 .hero-shapes .shape {
     position: absolute;
     border-radius: 50%;
@@ -273,7 +275,8 @@ body {
     color: white;
     outline: none;
 }
-.footer{
+
+.footer {
     text-align: center;
 }
 
@@ -287,11 +290,22 @@ body {
         grid-template-columns: 1fr;
         padding: 30px;
     }
+
+    #header {
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        padding: 10px;
+        border-bottom: 2px solid transparent;
+    }
 }
 
 @media (max-width: 768px) {
     .desktop-nav {
-        display: flex;
+        display: none;
     }
 
     /* Remove traditional nav */

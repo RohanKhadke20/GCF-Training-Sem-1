@@ -1,0 +1,34 @@
+
+.hx{
+    height: 500px;
+    width: 1000px;
+    background-color: yellow;
+}
+.hs{
+    background-color:blue;
+    padding:100px 100px;
+    color:white;
+    height:50px;
+    width:200px;
+    border: 20px dashed red;
+    border-radius:10px;
+    margin:20px;
+}
+.hv{
+    background-color:rgb(144, 8, 228);
+    padding:100px 100px;
+    color:white;
+    height:50px;
+    width:200px;
+    margin:20px;
+}
+.hv:hover{
+    border-left: 20px solid red;
+    border-radius:10px;
+}
+.image{
+    background-color: red;
+    width:1000px;
+}
+
+    
