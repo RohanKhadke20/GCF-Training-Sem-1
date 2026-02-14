@@ -9,10 +9,11 @@
     padding:100px 100px;
     color:white;
     height:50px;
-    width:200px;
+    width:50%;
     border: 20px dashed red;
     border-radius:10px;
     margin:20px;
+    justify-content: center;
 }
 .hv{
     background-color:rgb(144, 8, 228);
@@ -30,5 +31,13 @@
     background-color: red;
     width:1000px;
 }
+button{
+   width:50%;
+   height:75%;
+    background-color: orange;
+    padding:5px 10px;
+    border:5px solid white;
+    box-shadow: 10px 10px 5px ;
 
+}
     
